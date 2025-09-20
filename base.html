@@ -31,6 +31,7 @@
   <link href="./css/section-3.css" rel="stylesheet" />
   <link href="./css/timeline.css" rel="stylesheet" />
   <link href="./css/envelope.css" rel="stylesheet" />
+  <link href="./css/player.css" rel="stylesheet" />
 
   <style>
     .parisienne-regular {
@@ -45,25 +46,52 @@
       font-style: normal;
     }
   </style>
-  <title>¡Nos casamos! | 06/Sep/2024</title>
+  <title>¡60 años!</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   </link>
 </head>
 
 <body>
   <div id="env-init">
-    <div class="envlope-wrapper parisienne-regular">
-      <div id="envelope" class="close">
-        <div class="front flap"></div>
-        <div class="front pocket"></div>
-        <div class="letter">
-          <div class="words line1">David y Yareli</div>
+    <div class="player-wrap" role="region">
+      <div class="top-row">
+        <div class="turntable" id="turntable">
+          <div class="platter">
+            <div class="record" id="record">
+              <div class="label">
+                <svg viewBox="0 0 120 120" width="90" height="90">
+                  <defs>
+                    <path id="circlePath"
+                      d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0" />
+                  </defs>
+                  <text font-size="25" dy="6" font-weight="700" fill="#111"
+                    letter-spacing="1.3">
+                    <textPath href="#circlePath" startOffset="48%"
+                      text-anchor="middle">
+                      ARACELI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60&nbsp;&nbsp;años
+                    </textPath>
+                  </text>
+                </svg>
+
+              </div>
+              <div class="spindle"></div>
+            </div>
+
+            <div class="arm-assembly" id="armAssembly">
+              <div class="arm-pivot"></div>
+              <div class="arm" id="arm">
+                <div class="headshell"></div>
+                <div class="stylus"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <div class="reset">
-      <button id="open">Abrir</button>
+      <div class="reset">
+        <button id="open">&#9654; Reproducir</button>
+      </div>
     </div>
   </div>
 
@@ -138,7 +166,8 @@
           queremos compartir contigo la alegría de nuestra unión.
           <br />
           <br />
-          Nos encantaría que nos acompañes a celebrar este momento tan especial.
+          Nos encantaría que nos acompañes a celebrar este momento tan
+          especial.
         </span>
       </div>
 
@@ -351,6 +380,49 @@
   <script type="text/javascript" src="./js/timer.js"></script>
   <script type="text/javascript" src="./js/music.js"></script>
   <script type="text/javascript" src="./js/envelope.js"></script>
+  <script>
+    const turntable = document.getElementById('turntable');
+    const playBtn2 = document.getElementById('open');
+    const arm = document.getElementById('arm');
+
+    let playing = false;
+
+    function setPlaying(on) {
+      playing = !!on;
+      if (playing) {
+        turntable.classList.add('playing');
+        playBtn2.setAttribute('aria-pressed', 'true');
+
+        arm.classList.remove('returning');
+        arm.style.animation = 'none';
+        void arm.offsetWidth;
+        arm.style.animation = null;
+
+
+      } else {
+        turntable.classList.remove('playing');
+        playBtn2.setAttribute('aria-pressed', 'false');
+
+        arm.style.animation = 'none';
+        void arm.offsetWidth;
+        arm.classList.add('returning');
+
+      }
+    }
+
+    playBtn2.addEventListener('click', () => {
+      setPlaying(!playing);
+    });
+
+    playBtn2.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        setPlaying(!playing);
+      }
+    });
+
+    setPlaying(false);
+  </script>
 </body>
 
 
