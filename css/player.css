@@ -1,0 +1,256 @@
+:root{
+--bg:#e6e6e6;
+--chassis:#d32f87;
+--plinth:#ddd;
+--plate:#222;
+--metal:#2F35D3;
+--label:#D3CD2F;
+--shadow: rgba(0,0,0,0.25);
+}
+
+.placa{
+  text-align: center;
+  font-size: 31px;
+  font-family: 'monoton';
+}
+
+#env-init {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+
+.player-wrap {
+  width: 560px;
+  max-width: 95vw;
+  /*background: var(--plinth);*/
+  border-radius: 12px;
+  padding: 28px;
+  /*box-shadow: 0 14px 40px var(--shadow);
+  border: 1px solid #ccc;*/
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Turntable base */
+.turntable {
+  width: 380px;
+  height: 481px;
+  border-radius: 8px;
+  background: var(--chassis);
+  padding: 36px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  user-select: none;
+}
+
+/* Platter and record */
+.platter {
+  width: 100%;
+  height: 72%;
+  border-radius: 50%;
+  /*background: radial-gradient(circle at 30% 30%, #333 0%, #111 80%);*/
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.record {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#000 0 3deg, #050505 3deg 6deg);
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: box-shadow .25s ease;
+}
+
+.label {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--label);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* spindle */
+.spindle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--metal);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+/* Arm */
+.arm-assembly {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  pointer-events: none;
+  transform-origin: 28px 30px;
+  z-index: 8;
+}
+
+.arm-pivot {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #bbb, #999);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+}
+
+.arm {
+  width: 190px;
+  height: 6px;
+  background: linear-gradient(90deg, #cfcfcf, #999);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  transform-origin: 14px 3px;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transform: rotate(-40deg);
+  transition: transform 0.6s ease;
+}
+
+.headshell {
+  position: absolute;
+  right: -10px;
+  top: -6px;
+  width: 28px;
+  height: 16px;
+  background: #ccc;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.stylus {
+  position: absolute;
+  right: -4px;
+  top: 10px;
+  width: 4px;
+  height: 10px;
+  background: #605f5f;
+  border-radius: 1px;
+  transform: rotate(20deg); 
+}
+
+/* resting vs playing states */
+.turntable.playing .record {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.turntable.playing .arm {
+  animation: armToCenter 1s linear forwards;
+}
+
+@keyframes armToCenter {
+  0% {
+    transform: rotate(-40deg);
+  }
+
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
+.turntable .arm.returning {
+  animation: armReturn 0.6s ease forwards;
+}
+
+@keyframes armReturn {
+  to {
+    transform: rotate(-40deg);
+  }
+}
+
+/* control column */
+.controls {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex-direction: column;
+}
+
+.btn {
+  background: #111;
+  color: #fff;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform .12s ease;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.meta {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.meter {
+  width: 160px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.meter>i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #666, #aaa);
+  transition: width .25s linear;
+}
+
+.credit {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 6px;
+}

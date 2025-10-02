@@ -1,0 +1,263 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+  border: 0px;
+  padding: 0px;
+
+  background-color: black;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-content {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/img/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  /* Optional: centers the image */
+  background-repeat: no-repeat;
+}
+
+
+.middle-text {
+  font-size: 30px;
+}
+
+.big-text {
+  font-size: 120px;
+}
+
+.neon-rose {
+  font-size: 30px;
+  color: #fff;
+  /* Initial text color, can be a very light pink */
+  text-align: center;
+}
+
+.neon-text {
+  color: #fff;
+  /* Initial text color, can be a very light pink */
+  text-align: center;
+  text-shadow:
+    0 0 7px #fff, /* Inner white glow */
+    0 0 10px #fff,
+    0 0 21px #ffb3d9, /* Light rose glow */
+    0 0 42px #ff66b3, /* Medium rose glow */
+    0 0 82px #e60073, /* Deeper rose glow */
+    0 0 92px #cc0066,
+    0 0 102px #b30059,
+    0 0 151px #99004d; /* Outermost, darkest rose glow */
+}
+
+/*.hero div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}*/
+
+h1 {
+  width: 100vw;
+  text-align: center;
+  color: white;
+  font-family: "Cormorant Garamond", Sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 8vmin, 8rem);
+  letter-spacing: 3.5px;
+}
+
+.hero .aurora {
+  --color-one: hsl(60.8, 64.1%, 22.9%);
+  --color-two: hsl(62.4, 72.4%, 60.2%);
+  background: linear-gradient(to right, rgba(0, 168, 253), #fff, #e00a95);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: move-aurora 4s linear infinite;
+  font-size: clamp(2.5rem, 8vmin, 8rem);
+  letter-spacing: 3.5px;
+}
+
+@keyframes move-aurora {
+  0% {
+    background-position: 0% 75%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 70%;
+  }
+}
+
+.timer-wrapper {
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  color: white;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.hero-timer {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.hero-timer-section {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  /* border: 1px solid red; */
+}
+
+.hero .spacer {
+  height: 30vh !important;
+}
+
+.hero .spacer-five {
+  height: 5vh !important;
+}
+
+.hero .spacer-ten {
+  height: 10vh !important;
+}
+
+.hero-legend {
+  color: #fefff1;
+}
+
+.ourNames {
+  color: white;
+  font-size: 18px;
+  background: transparent;
+}
+
+.hero-names {
+  background-image: url(../img/olive.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  height: 200px;
+
+  background-color: #ffffff05;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 50%;
+  width: 50% !important;
+}
+
+.hero-bride-name {
+  margin-top: 20px;
+  font-size: 60px;
+  color: #3e386d;
+}
+
+.hero-groom-name {
+  margin-top: 100px;
+  margin-left: 20px;
+  font-size: 60px;
+  color: #3b7ea4;
+}
+
+.hero-both-names {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 33px;
+  letter-spacing: 3.5px;
+}
+
+.hero-wedding-date {
+  margin-top: 12px;
+  font-weight: 600;
+  height: 26px;
+}
+
+.rotating-wrapper {
+  position: relative;
+}
+
+.rotating-wrapper h1 {
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0, 0, 0, 0.5);
+}
+
+.srotate::before {
+  content: "conocimos";
+  animation: animate 3s infinite;
+}
+
+@keyframes animate {
+  0% {
+    content: "conocimos";
+  }
+
+  30% {
+    content: "enamoramos";
+  }
+
+  60% {
+    content: "casamos";
+  }
+}
+
+.section-gallery {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  /* width: 160px;
+  height: 108px; */
+  width: 210px;
+  height: 158px;
+  transform-style: preserve-3d;
+  animation: gallery 35s linear infinite;
+}
+
+.box span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 60deg)) translateZ(200px);
+  background: radial-gradient(ellipse at bottom, #524c8199 0%, #352948 100%);
+}
+
+.box span img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes gallery {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}

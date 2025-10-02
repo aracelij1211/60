@@ -1,0 +1,114 @@
+.section-two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: radial-gradient(ellipse at bottom, #FAE7EA 0%, #FEB5CA 100%);
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.section-two div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-two-flower {
+  background-image: url(../img/olive.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 17%;
+  height: 200px;
+}
+
+.section-two-text {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.section-two-text-variant {
+  text-align: center;
+  font-size: 30px;
+  color: #FA35AF;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.section-two-years {
+  text-align: center;
+  font-size: 80px;
+  color: #F736D3;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.sep-top {
+  margin-top: 60px !important;
+}
+
+.section-two-header {
+  margin-top: 60px;
+  font-size: 22px;
+  text-align: center;
+  color: #532126;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.section-two-and {
+  font-size: 30px;
+  color: #532126;
+}
+
+.section-two-date {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 22px;
+  color: #532126;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.section-two-date span {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.section-two-location {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #532126;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.section-two-location:last-child {
+  margin-bottom: 30px !important;
+}
+
+.section-two-location span {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.section-two-date-maps {
+  width: 100%;
+  margin-top: 1px;
+  filter: grayscale(20%)
+}
+
+.section-two-date-full {
+  color: #532126;
+}

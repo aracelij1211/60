@@ -1,0 +1,94 @@
+.section-one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border: 0px;
+  padding: 0px;
+  margin-bottom: 26px;
+  height: 100vh;
+}
+
+.section-one div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-one-timer {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  margin-bottom: 20px;
+  background: radial-gradient(ellipse at bottom, #524c81 0%, #352948 100%);
+  padding: 8px;
+  color: white;
+}
+
+.section-one-timer-section {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+}
+
+.section-one-legend {
+  color: #fefff1;
+}
+
+.section-one-names {
+  background-image: url(../img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  height: 200px;
+}
+
+.section-one-bride-name {
+  margin-top: 20px;
+  font-size: 62px;
+  color: #524c81;
+}
+
+.section-one-groom-name {
+  margin-top: 100px;
+  margin-left: 20px;
+  font-size: 62px;
+  color: #3b7ea4;
+}
+
+.section-one-both-names {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 26px;
+  letter-spacing: 3.5px;
+}
+
+.section-one-wedding-date {
+  margin-top: 10px;
+  height: 40px;
+}
+
+.rotating-wrapper {
+}
+
+.rotating-wrapper h1 {
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0, 0, 0, 0.5);
+}
+
+
+.srotate::before {
+  content: 'conocimos';
+  animation: animate infinite 4s;
+}
+
+@keyframes animate {
+  30%{
+    content: 'enamoramos';
+  }
+  60%{
+    content: 'casaremos';
+  }
+}

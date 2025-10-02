@@ -1,0 +1,105 @@
+.section-three {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: #fff;
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.section-with-icon {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-with-icon:nth-child(1) {
+  margin-top: 60px !important;
+}
+
+.icon {
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.section-with-icon img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(44%) saturate(4889%) hue-rotate(304deg) brightness(104%) contrast(96%)!important;
+
+}
+
+.section-with-icon .dress-code {
+  width: 35px;
+}
+
+.section-with-icon .hotel {
+  width: 50px;
+}
+
+.section-with-icon .gift {
+  width: 40px;
+}
+
+.section-with-icon .detail {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.section-with-icon .detail-full {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.detail-full .header,
+.detail .header {
+  color: #fa35af;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.detail .disclaimer {
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.detail-full .content,
+.detail .content {
+  color: #532126;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.detail-full {
+  margin-bottom: 10px;
+}
+
+.detail-full a,
+.detail a {
+  text-decoration: none;
+}
+
+
+.section-fouth {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/img/bgf.png);
+  background-size: cover;
+  background-position: center center;
+  /* Optional: centers the image */
+  background-repeat: no-repeat;
+}
