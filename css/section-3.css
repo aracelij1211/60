@@ -97,7 +97,7 @@
   height: 85vh;
   display: flex;
   flex-direction: column;
-  background-image: url(/img/bgf.png);
+  background-image: url(./img/bgf.png);
   background-size: cover;
   background-position: center center;
   /* Optional: centers the image */
