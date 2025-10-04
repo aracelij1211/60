@@ -34,6 +34,7 @@ function open() {
 }
 
 btn_open.addEventListener("click", () => {
+  btn_open.style.display='none';
   open();
 },
   false

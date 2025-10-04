@@ -1,10 +1,9 @@
 const audio = new Audio(
   "./ms/song.mp3"
 );
-audio.autoplay = true;
+audio.autoplay = false;
 audio.loop = true;
 
-console.dir(audio);
 
 audio.addEventListener(
   "loadeddata",
