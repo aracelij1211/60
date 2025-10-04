@@ -41,7 +41,7 @@
 /* Turntable base */
 .turntable {
   width: 380px;
-  height: 481px;
+  height: 500px;
   border-radius: 8px;
   background: var(--chassis);
   padding: 36px;

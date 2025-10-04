@@ -104,15 +104,27 @@ h1 {
 .timer-wrapper {
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
-  color: white;
+  color: black;
   padding: 8px;
   margin-top: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.simple-separator {
+  border: none; /* Removes the default 3D border */
+  border-top: 1px solid #ccc; /* Creates a thin, solid grey line */
+  margin: 20px 0; /* Adds vertical spacing above and below the line */
+  width: 85%; /* Sets the width of the line to 80% of its container */
+  margin-left: auto; /* Centers the line horizontally */
+  margin-right: auto; /* Centers the line horizontally */
 }
 
 .hero-timer {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
+  justify-content: space-evenly;
 }
 
 .hero-timer-section {
@@ -135,7 +147,13 @@ h1 {
 }
 
 .hero-legend {
-  color: #fefff1;
+  color: black;
+  font-size: 17px;
+}
+
+.legend-value {
+  color: black;
+  font-size: 27px;
 }
 
 .ourNames {

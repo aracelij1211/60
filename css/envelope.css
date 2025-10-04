@@ -140,7 +140,7 @@ body {
 }
 
 .reset {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -150,13 +150,13 @@ body {
   transition: all 0.1s linear;
   -webkit-appearance: none;
   background-color: transparent;
-  border: solid 2px #86486d;
+  border: solid 2px #f2eaef;
   border-radius: 4px;
-  color: #86486d;
+  color: #fff;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
-  margin: 5px;
+  margin: 10px;
   padding: 10px;
   line-height: 1em;
   text-decoration: none;
@@ -165,7 +165,7 @@ body {
 }
 
 .reset button:hover {
-  background-color: #86486d;
+  background-color: transparent;
   color: #fff;
 }
 
