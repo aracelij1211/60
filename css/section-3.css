@@ -22,6 +22,41 @@
   margin-top: 60px !important;
 }
 
+.section-confirm {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.confirm-full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.confirm-full .header {
+  color: #fa35af;
+  font-size: 28px;
+  margin-bottom: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.confirm-disclaimer{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: darkblue;
+  font-size: 20px;
+}
+
 .icon {
   width: 60px;
   display: flex;
@@ -31,7 +66,7 @@
 }
 
 .section-with-icon img {
-  filter: brightness(0) saturate(100%) invert(34%) sepia(44%) saturate(4889%) hue-rotate(304deg) brightness(104%) contrast(96%)!important;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(44%) saturate(4889%) hue-rotate(304deg) brightness(104%) contrast(96%) !important;
 
 }
 
@@ -56,17 +91,23 @@
 }
 
 .section-with-icon .detail-full {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-with-icon .detail-full>div {
+  width: 90%;
 }
 
 .detail-full .header,
 .detail .header {
   color: #fa35af;
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 5px;
 }
 
@@ -102,4 +143,12 @@
   background-position: center center;
   /* Optional: centers the image */
   background-repeat: no-repeat;
+}
+
+@media (min-width: 843px) {
+
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .section-fouth {
+    display: none;
+  }
 }

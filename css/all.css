@@ -82,8 +82,8 @@ audio {
   color: white;
   padding: 15px 25px;
   text-decoration: none;
-  border-radius: 2px;
-  margin-bottom: 62px;
+  border-radius: 5px;
+  font-size: 30px;
 }
 
 .fcc-btn:hover {
